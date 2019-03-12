@@ -6,7 +6,7 @@
       <grid-item :cols="2" :label="('movie')">
         <img slot="icon" src="../assets/movie.png">
       </grid-item>
-      <grid-item :label="('fire')">
+      <grid-item :label="('ball')">
         <img slot="icon" src="../assets/fire.png">
       </grid-item>
       <grid-item :label="('music')">

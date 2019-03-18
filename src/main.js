@@ -5,6 +5,8 @@ import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
 import Home from './components/Home'
+import { AjaxPlugin } from 'vux'
+Vue.use(AjaxPlugin)
 
 Vue.use(VueRouter)
 

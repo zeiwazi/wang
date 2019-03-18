@@ -65,6 +65,21 @@ const urlList = baseList.map((item, index) => ({
   fallbackImg: item.fallbackImg,
   title: `(可点击)${item.title}`
 }))
+created () {
+    let _this = this
+    this.$http.post('https://api.apiopen.top/getJoke').then(({data}) => {
+      console.log(data)
+      var new_data = data.result.map((item, index) => ({
+        src: item.header,
+        fallbackSrc: item.header,
+        title: item.name,
+        desc: item.text
+      }))
+      console.log(new_data)
+      _this.list = new_data
+    })
+  },
+
 
 export default {
   components: {

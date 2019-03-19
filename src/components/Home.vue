@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header :right-options="{showMore: true}" :left-options="{showBack: false}">你装饰了别人的梦</x-header>
+    <x-header :right-options="{showMore: true}" @click.native="Log":left-options="{showBack: false}">你装饰了别人的梦</x-header>
     <swiper loop auto :list="demo06_list" :index="demo06_index"></swiper>
     <grid>
       <grid-item :cols="2" :label="('movie')">
@@ -93,6 +93,11 @@ export default {
     Tabbar,
     TabbarItem,
     Cell
+  },
+   methods: {
+    Log () {
+      this.$router.push({ path: '/Log' })
+    }
   },
   data () {
     return {
